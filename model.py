@@ -402,8 +402,11 @@ class Model:
                         save_path=None,):
         print("Module Pix2Pix")
         if self.model_type != ModelType.Pix2Pix_Video:
-            self.set_model(ModelType.Pix2Pix_Video,
-                           model_id="timbrooks/instruct-pix2pix")
+            self.set_model(
+                ModelType.Pix2Pix_Video,
+                # model_id="timbrooks/instruct-pix2pix"
+                model_id="/workspace/models/instruct-pix2pix"
+            )
             self.pipe.scheduler = EulerAncestralDiscreteScheduler.from_config(
                 self.pipe.scheduler.config)
             if use_cf_attn:

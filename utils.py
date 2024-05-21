@@ -11,12 +11,14 @@ import cv2
 from PIL import Image
 from annotator.util import resize_image, HWC3
 from annotator.canny import CannyDetector
-from annotator.openpose import OpenposeDetector
+# from annotator.openpose import OpenposeDetector
 from annotator.midas import MidasDetector
 import decord
 
 apply_canny = CannyDetector()
-apply_openpose = OpenposeDetector()
+# apply_openpose = OpenposeDetector()
+def apply_openpose(*args, **kwargs):
+    return None, None
 apply_midas = MidasDetector()
 
 
